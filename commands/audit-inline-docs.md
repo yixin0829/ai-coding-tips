@@ -1,13 +1,38 @@
 ---
-description: Update docstrings, comments, and logs to be up-to-date with source code
-auto_execution_mode: 1
+allowed-tools: Bash(cat:*), Bash(grep:*), Bash(rg:*), Edit(write_file:*)
+description: Audit inline comments, log messages, and docstrings to accurately reflect the source code
 ---
 
-1. Carefully review the active file to understand the source code. If needed, review other related files as well.
+## Context
 
-2. Identify any outdated documentation like docstrings, comments, and logs that need to be updated or can be improved.
+- Active File Content: !`cat $ACTIVE_FILE`
+- Related Files: (Use `grep` or `rg` to find related imports/dependencies if needed)
 
-3. Finally, update the identified outdated documentation to accurately reflect the source code following the best documentation practice detailed in Google Python Style Guide "3.8 Comments and Docstrings" section (https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
+## Your Task
+
+1. **Review Source Code:** Carefully examine the active file to understand:
+   * The purpose and functionality of each module, class, function, and method.
+   * The logic flow and key implementation details.
+   * Dependencies and relationships with other code components.
+
+2. **Identify Documentation Issues:** Find docstrings, inline comments, and log messages that:
+   * **Are outdated:** No longer match the current implementation (e.g., parameter names changed, return types differ, logic altered).
+   * **Are missing:** Functions, classes, or methods lack docstrings entirely.
+   * **Are unclear:** Vague, ambiguous, or fail to explain the "why" behind the code.
+   * **Are incorrect:** Contain factual errors about what the code does.
+
+3. **Update Documentation:** For each identified issue:
+   * Rewrite docstrings to accurately describe the current implementation.
+   * Update or add inline comments that explain *why* decisions were made (not *what* the code does).
+   * Ensure log messages are clear, informative, and use appropriate log levels.
+   * Follow the documentation best practices detailed below from the [Google Python Style Guide "3.8 Comments and Docstrings"](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings).
+
+4. **Preserve Code Integrity:** 
+   * Do NOT modify any executable code, logic, or functionality.
+   * Only update documentation elements (docstrings, comments, log messages).
+   * Maintain the existing code structure, formatting, and style conventions.
+
+**Before applying changes:** Present a summary listing each documentation issue found and how you plan to fix it.
 
 ## 1. General Principles
 
