@@ -72,11 +72,11 @@ I haven't explored MCP servers much. Just covered the basic concepts and how to 
 
 ## Hooks
 Supported by Cursor and Claude Code as of 2025-10-04 which enable lifecycle customization. For example, automatic version control after every task is done.
-- Cursor Doc: https://cursor.com/docs/agent/hooks
-- Claude Code Doc: https://docs.claude.com/en/docs/claude-code/hooks-guide
+- [Cursor Hooks Documentation](https://cursor.com/docs/agent/hooks)
+- [Claude Code Hooks Guide](https://docs.claude.com/en/docs/claude-code/hooks-guide)
 
 Some interesting use cases I like:
-- Notification after Claude Code finished a task (https://docs.claude.com/en/docs/claude-code/hooks-guide#custom-notification-hook)
+- [Notification after Claude Code finished a task](https://docs.claude.com/en/docs/claude-code/hooks-guide#custom-notification-hook)
 - Spawn a code agent in a sub-process to sync the documentation every time the code is changed.
 
 CAUTION: Hooks may be executed at arbitrary stages of the task lifecycle. Ensure the hooks are well tested.
@@ -113,7 +113,7 @@ Git worktree allows you to checkout branches in a new directory so you can work 
 ### Yolo Mode
 As the name suggests, in Yolo mode you put 100% trust and let the coding agent run everything without permission. Cursor used to have Yolo mode but since then it was rebranded as `Auto-Run` mode with an option to "Run Everything". On Claude Code, you can use `claude --dangerously-skip-permissions` to bypass all permission.
 
-It's advised to run Yolo mode in an isolated environment without internet access (e.g. Docker container) to avoid disaster. Here's an example by Anthropic: https://github.com/anthropics/claude-code/tree/main/.devcontainer
+It's advised to run Yolo mode in an isolated environment without internet access (e.g. Docker container) to avoid disaster. Here's an example by Anthropic: [Claude Code DevContainer Example](https://github.com/anthropics/claude-code/tree/main/.devcontainer)
 
 Personally, I never use Yolo mode because I want some level of control and understanding of the codebase so I can continuously iterate and provide useful feedback. I've had some past vibing coding projects that went completely out of control and ended up with a mess. By avoiding Yolo mode and intervening at the right time, I can ensure my brain is not being lazy and force myself to review and understand the code.
 
