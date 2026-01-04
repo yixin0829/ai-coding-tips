@@ -1,21 +1,37 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read",
+      "LS",
+      "Grep",
+      "Bash(powershell -Command \"Get-Date -Format ''HH:mm''\")",
+      "Bash(uv run pytest:*)",
+      "Bash(uv add:*)",
+      "Bash(uv remove:*)",
+      "Bash(uv sync:*)",
+      "Bash(git status:*)"
+    ],
+    "deny": [
+      "Bash(curl:*)"
+    ],
+    "ask": [
+      "Bash(uv run python:*)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "model": "opus",
   "hooks": {
-    // Available Hook Events: https://docs.claude.com/en/docs/claude-code/hooks#hook-events
     "Notification": [
       {
         "matcher": "",
         "hooks": [
           {
             "type": "command",
-
-            // For Windows Powershell
-            "command": "powershell -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code awaiting your input' -Sound 'Default' -AppLogo 'C:\\Users\\yixin\\OneDrive\\Pictures\\Icons\\claude.png'\""
-
-            // For Linux
-            // "command": "notify-send 'Claude Code' 'Awaiting your input'"
-
-            // For MacOS
-            // "command": "afplay /System/Library/Sounds/Funk.aiff"
+            "command": "powershell -Command \"New-BurntToastNotification -Text 'Claude Code awaiting your input' -Sound 'Default' -AppLogo 'C:\\Users\\yixin\\OneDrive\\Pictures\\Icons\\claude.png'\""
           }
         ]
       }
@@ -26,18 +42,18 @@
         "hooks": [
           {
             "type": "command",
-
-            // For Windows Powershell
-            "command": "powershell -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code finished' -Sound 'Mail' -AppLogo 'C:\\Users\\yixin\\OneDrive\\Pictures\\Icons\\claude.png'\""
-
-            // For Linux
-            // "command": "notify-send 'Claude Code' 'Claude Code finished'"
-
-            // For MacOS
-            // "command": "afplay /System/Library/Sounds/Funk.aiff"
+            "command": "powershell -Command \"New-BurntToastNotification -Text 'Claude Code finished' -Sound 'Mail' -AppLogo 'C:\\Users\\yixin\\OneDrive\\Pictures\\Icons\\claude.png'\""
           }
         ]
       }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "powershell -NoProfile -File C:\\Users\\yixin\\.claude\\statusline.ps1"
+  },
+  "enabledPlugins": {},
+  "feedbackSurveyState": {
+    "lastShownTime": 1754084669632
   }
 }
