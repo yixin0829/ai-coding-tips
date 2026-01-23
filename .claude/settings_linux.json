@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "attribution": { "commit": "", "pr": ""},
+  "cleanupPeriodDays": 30,
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read",
+      "LS",
+      "Grep",
+      "Bash(powershell -Command \"Get-Date -Format ''HH:mm''\")",
+      "Bash(uv run pytest:*)",
+      "Bash(uv add:*)",
+      "Bash(uv remove:*)",
+      "Bash(uv sync:*)",
+      "Bash(git status:*)"
+    ],
+    "deny": [
+      "Bash(curl:*)"
+    ],
+    "ask": [
+      "Bash(uv run python:*)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "model": "opus",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code awaiting your input'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code finished'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "/home/yixtian/.claude/statusline.sh",
+    "padding": 0
+  },
+  "enabledPlugins": {},
+  "feedbackSurveyState": {
+    "lastShownTime": 1754084669632
+  }
+}
