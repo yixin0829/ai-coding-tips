@@ -5,6 +5,7 @@
     - [Modular Rules with Claude](https://code.claude.com/docs/en/memory#modular-rules-with-claude/rules/)
 
 ## My Global Cursor Rules
+- Use `loguru` package for python logging. Avoid using the built-in `logging` module.
 - Never create new Markdown documentation files without asking for permission.
 - Use `uv run python` for running python scripts.
 
