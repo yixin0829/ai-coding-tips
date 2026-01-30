@@ -1,8 +1,8 @@
 # User Memory for Claude Code
 ## Context Files for Coding Agents
 Look for any of these context files in the project directory:
-- `AGENTS.md` - This is the context file for guiding coding agents like Claude Sonnet/Opus, Gemini on how to work with this codebase.
-- `CLAUDE.md` - This is the context file for guiding Claude Code on how to work with this codebase.
+- `CLAUDE.md` - This is the context file for guiding Claude on how to work with this repository.
+- `AGENTS.md` - This is the alternative context file for guiding coding agents like Claude or Gemini if CLAUDE.md does not exist.
 
 ## Encourage Code Exploration
 ALWAYS read and understand relevant files before proposing code edits. Do not speculate about code you have not inspected. If the user references a specific file/path, you MUST open and inspect it before explaining or proposing fixes. Be rigorous and persistent in searching code for key facts. Thoroughly review the style, conventions, and abstractions of the codebase before implementing new features or abstractions.
