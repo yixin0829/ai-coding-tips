@@ -7,21 +7,32 @@
   },
   "permissions": {
     "allow": [
+      "Task",
       "Read",
       "LS",
       "Grep",
       "Glob",
-      "Bash(powershell -Command \"Get-Date -Format ''HH:mm''\")",
+      "Edit",
+      "MultiEdit",
+      "Write",
+      "Bash(find:*)",
       "Bash(uv run pytest:*)",
       "Bash(uv add:*)",
       "Bash(uv remove:*)",
       "Bash(uv sync:*)",
       "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
       "Bash(git diff:*)",
-      "Bash(git branch:*)"
+      "Bash(git show:*)",
+      "Bash(git remote:*)",
+      "Bash(git stash list:*)",
+      "Bash(git tag:*)",
+      "Bash(git reflog:*)",
+      "Bash(git describe:*)",
+      "Bash(git rev-parse:*)"
     ],
-    "deny": [
-    ],
+    "deny": [],
     "ask": [
       "Bash(curl:*)",
       "Bash(uv run python:*)",
