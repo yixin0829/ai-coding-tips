@@ -16,12 +16,14 @@
       "Bash(uv add:*)",
       "Bash(uv remove:*)",
       "Bash(uv sync:*)",
-      "Bash(git status:*)"
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git branch:*)"
     ],
     "deny": [
-      "Bash(curl:*)"
     ],
     "ask": [
+      "Bash(curl:*)",
       "Bash(uv run python:*)",
       "Bash(rm:*)",
       "Bash(mv:*)",
