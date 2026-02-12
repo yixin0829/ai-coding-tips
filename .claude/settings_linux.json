@@ -16,6 +16,7 @@
       "MultiEdit",
       "Write",
       "Bash(find:*)",
+      "Bash(wc:*)",
       "Bash(uv run pytest:*)",
       "Bash(uv add:*)",
       "Bash(uv remove:*)",
@@ -30,7 +31,9 @@
       "Bash(git tag:*)",
       "Bash(git reflog:*)",
       "Bash(git describe:*)",
-      "Bash(git rev-parse:*)"
+      "Bash(git rev-parse:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(obsidian:*)"
     ],
     "deny": [],
     "ask": [
