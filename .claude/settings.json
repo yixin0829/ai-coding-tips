@@ -16,6 +16,8 @@
       "Write",
       "Bash(find:*)",
       "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(shuf:*)",
       "Bash(uv run pytest:*)",
       "Bash(uv add:*)",
       "Bash(uv remove:*)",
