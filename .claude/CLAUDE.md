@@ -21,7 +21,9 @@ Don't create helpers, utilities, or abstractions for one-time operations. Don't 
 
 ## Language-Specific Rules
 ### Python 3
-#### Running Python Scripts with `uv`
-- Use `uv` Python package manager to run python scripts and other commands.
-- Use `uv run --with <package>` to run scripts with ephemeral, per-run packages without polluting environments.
-  - Example: `uv run --with requests script.py`; multiple deps can be added with repeated `--with`.
+#### Package Manager: `uv`
+- Use `uv add <package>` to add a package to the virtual environment.
+- Use `uv run <command>` to run commands in the virtual environment.
+- Use `uv run python <script.py>` to run python scripts if venv is already created.
+- Use `uv run --with <dep1> <dep2> ... <depN> <script.py>` to run quick python scripts with ephemeral, per-run packages without polluting the virtual environments.
+  - Example: `uv run --with requests httpx pandas script.py`.
