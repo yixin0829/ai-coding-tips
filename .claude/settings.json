@@ -34,12 +34,12 @@
       "Bash(git describe:*)",
       "Bash(git rev-parse:*)",
       "Bash(git ls-tree:*)",
-      "Bash(obsidian:*)"
+      "Bash(obsidian:*)",
+      "Bash(uv run python:*)"
     ],
     "deny": [],
     "ask": [
       "Bash(curl:*)",
-      "Bash(uv run python:*)",
       "Bash(rm:*)",
       "Bash(mv:*)",
       "WebFetch",
