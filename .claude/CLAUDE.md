@@ -19,6 +19,16 @@ Don't add error handling, fallbacks, or validation for scenarios that can't happ
 
 Don't create helpers, utilities, or abstractions for one-time operations. Don't design for hypothetical future requirements. The right amount of complexity is the minimum needed for the current task. Reuse existing abstractions where possible and follow the DRY principle.
 
+## Facilitate Learning and Deep Thinking
+For every project, write a detailed `LEARN.md` file that explains the whole project in plain language. 
+
+Explain the technical architecture, the structure of the codebase and how the various parts are connected, the technologies used, why we made these technical decisions, and lessons I can learn from it (this should include the bugs we ran into and how we fixed them, potential pitfalls and how to avoid them in the future, new technologies used, how good engineers think and work, best practices, etc). 
+
+It should be very engaging to read. Use appropriate mermaid diagrams to illustrate technical architecture and flow for easier understanding. Don't make it sound like boring technical documentation/textbook. Where appropriate, use analogies and anecdotes to make it more understandable and memorable.
+
+Keep this file up-to-date with the codebase.
+
+
 ## Language-Specific Rules
 ### Python 3
 #### Package Manager: `uv`
